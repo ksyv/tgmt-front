@@ -1,0 +1,169 @@
+footer {
+  background-color: var(--gray-color);
+  color: var(--white-color);
+}
+
+ul {
+	list-style: none;
+}
+
+footer li {
+	float: left;
+	padding-left: 10px;
+}
+
+.footer-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	margin-left: 50px;
+	margin-right: 50px;
+
+}
+
+.social-icons a {
+	color: #3b3b3b;
+}
+
+.social-icons svg {
+	width: 26px;
+	fill: #2b2b2b;
+}
+
+.social-icons svg:hover {
+	fill: #f25c05;
+}
+
+
+
+/* styles pour le footer */
+
+.footer-container {
+	margin: 40px;
+	font-family: 'AlegreyaSansSC-Bold';
+}
+
+.footer-container ul {
+	font-size: 1.2em;
+}
+
+.footer-top a, .footer-top-alt a {
+	color: #fffdfd;
+	font-size: 18px;
+}
+
+.footer-top a:hover, .footer-top-alt a:hover {
+	color: #f25c05;
+}
+
+.footer-top-alt {
+	display: none;
+}
+
+/* media queries pour l'affichage mobile */
+
+@media screen and (max-width: 1024px) {
+
+	/* adaptations pour le header et la navigation */
+
+	.nav-container, .footer-container {
+		width: 100%;
+		margin: auto;
+	}
+
+	.nav-content, .footer-container {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.nav-content {
+		width: 100%;
+		margin-left: 30px;
+		justify-content: center;
+	}
+
+	.nav, .social-icons {
+		margin: 0;
+		padding: 0;
+	}
+
+	.nav ul li, .social-icons ul li {
+		display: inline-block;
+		margin-right: 1px;
+	}
+
+	.nav ul li:last-child, .social-icons ul li:last-child {
+		margin-right: 0;
+	}
+
+	.nav a, footer a {
+		font-size: 12px;
+	}
+
+	.logo {
+		margin: 0;
+		height: 120px;
+	}
+
+	.social-icons svg {
+		width: 16px;
+	}
+
+	.header-container {
+		flex-flow: column wrap;
+		padding: 0;
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+
+	.cta-container {
+		flex-direction: column-reverse;
+	}
+
+	.main-title, .main-text {
+		display: none;
+	}
+
+	.main-text-alt {
+		display: contents;
+		padding-bottom: 40px;
+	}
+
+	.header-content, .main-text, .cta-container {
+		width: 80vw;
+		height: auto;
+	}
+
+	.cta {
+		width: auto;
+	}
+
+	.header-object {
+		display: none;
+	}
+
+	/* adaptations pour le footer */
+
+	.footer-top {
+		display: none;
+	}
+
+	.footer-top-alt {
+		display: contents;
+	}
+
+	.footer-top-alt a {
+		padding: 20px;
+	}
+
+	.footer-bot nav {
+		display: none;
+	}
+
+	.footer-bot p {
+		padding: 40px;
+		padding-top: 0;
+		text-align: center;
+	}
+}

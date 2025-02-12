@@ -1,0 +1,40 @@
+<div class="container">
+  <h1 class="text-center mb-4">Gestion des Utilisateurs</h1>
+
+  <form (ngSubmit)="searchUser(searchTerm.value)">
+    <div class="form-group">
+      <label for="searchTerm">Rechercher par nom d'utilisateur, nom ou prénom :</label>
+      <input type="text" id="searchTerm" class="form-control" #searchTerm>
+    </div>
+    <button type="submit" class="btn btn-primary btn-custom-gradient w-100 mt-3">Rechercher</button>
+  </form>
+
+  <table class="table mt-4">
+    <thead>
+      <tr>
+        <th>Nom d'utilisateur</th>
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th>Email</th>
+        <th>Téléphone</th>
+        <th>Admin</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{ user.username }}</td>
+        <td>{{ user.lastname }}</td>
+        <td>{{ user.firstname }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.telephone }}</td>
+        <td>
+          <input type="checkbox" [checked]="user.role === 'admin'" (change)="onRoleChange(user)">
+        </td>
+        <td>
+          <button class="btn btn-danger" (click)="deleteUser(user._id)">Supprimer</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
